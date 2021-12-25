@@ -37,13 +37,16 @@ public class Sender {
         String host = scanner.nextLine();
         System.out.println("Введите номер порта");
         int port = scanner.nextInt();
-        scanner.close();
+        scanner.nextLine();
         Sender sender = new Sender(host, port);
-        for (int i = 1; i <= 10; i++) {
-            sender.sendMessage("1 test message " + i + "\n");
-        }
-        Path filepath = Paths.get("input.txt");
-        String source = Files.readString(filepath);
-        sender.sendMessage(source);
+        System.out.println("Введите сообщение для передачи");
+        String textMessage = scanner.nextLine();
+        sender.sendMessage("1 " + textMessage + "\n");
+        System.out.println("Введите название файла с данными для диаграммы");
+        String filePath = scanner.nextLine();
+        scanner.close();
+        Path path = Paths.get(filePath);
+        String source = Files.readString(path);
+        sender.sendMessage("2 " + source);
     }
 }
