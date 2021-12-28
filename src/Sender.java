@@ -5,6 +5,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
+//отправитель сообщений
 public class Sender {
     //IP-адрес получателя сообщения
     private String host;

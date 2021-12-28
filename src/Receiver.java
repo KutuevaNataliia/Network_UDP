@@ -3,6 +3,7 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.util.Scanner;
 
+//приёмник сообщений
 public class Receiver {
     public static void main(String[] args) {
         //создание сканера для считывания данных с клавиатуры
@@ -37,7 +38,7 @@ public class Receiver {
                 } else if (messageType == Sender.DIAGRAM){
                     //вывод в консоль сообщения о получении диаграммы
                     System.out.println("Получены значения величины углов: " + textMessage);
-                    //создание диаграммы
+                    //создание диаграммы на основе полученного сообщения
                     Diagram diagram = new Diagram(textMessage);
                 }
             }

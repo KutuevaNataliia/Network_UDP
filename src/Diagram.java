@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.StringTokenizer;
 
+//класс, отображающий диаграмму
 public class Diagram extends JFrame {
     //строка с величинами углов для диаграммы
     String sChart;
@@ -13,6 +14,7 @@ public class Diagram extends JFrame {
         setVisible(true);
     }
 
+    //отрисовка графической формы
     public void paint(Graphics g) {
         //величина угла сектора
         int angleFromChart;
